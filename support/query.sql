@@ -38,3 +38,20 @@ ALTER TABLE KsiazkiZamowienia ADD CONSTRAINT `KsiazkiZamowieniaKsiazkaIdFK` FORE
 -- Dodanie początkowej zawartości do tabel.
 
 W pliku insert.sql
+
+Zadanie 4.1
+
+ALTER TABLE Klienci ADD COLUMN `Email` VARCHAR(245) UNIQUE;
+ALTER TABLE Klienci ADD COLUMN `Haslo` VARCHAR(100) NOT NULL;
+
+ALTER TABLE Klienci CHANGE COLUMN `Nr domu` `Nr_domu` VARCHAR(5) NOT NULL;
+ALTER TABLE Klienci CHANGE COLUMN `Nr mieszkania` `Nr_mieszkania` VARCHAR(5);
+
+ALTER TABLE Klienci CHANGE COLUMN `Miasto` `Miejscowosc` VARCHAR(60) NOT NULL;
+
+SELECT `Id`, `Imie`, `Nazwisko`, `Haslo` FROM klienci WHERE `Email`='$email'
+
+4.3 
+
+UPDATE klienci SET Email = "bdruminski@wat.edu.pl", Haslo = "qwerty123" WHERE Id = 1
+
